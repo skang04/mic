@@ -1,6 +1,10 @@
 let mic;
 let cnv;
+var audiocontext;
 
+function preload() {
+    this.audiocontext = getAudioContext();
+}
 
 function setup() {
     cnv=createCanvas(600,600);
