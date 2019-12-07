@@ -1,29 +1,38 @@
 let mic;
 let cnv;
-var audiocontext;
+let mountain;
+let sensitive = 7;
+var touchStarted;
 
-function preload() {
-    this.audiocontext = getAudioContext();
-}
 
 function setup() {
-    cnv=createCanvas(600,600);
-    centerCanvas();
+    cnv = createCanvas(1, 1);
+   cnv.position(100,1);
     mic = new p5.AudioIn();
     mic.start();
-}
+    mountain = select('.mountain');
 
-function centerCanvas() {
-    let x = (windowWidth - width) / 2;
-    let y = (windowHeight - height) / 2;
-    cnv.position(x,y)
 }
 
 function draw() {
-    background(255);
-    var vol = (mic.getLevel()*3000);
-    noStroke();
-    ellipse(width/2, height/2, 300,300);
-    fill(255, 221-vol, 110)
-    console.log(vol);
+    background('#053030');
+    let vol = (mic.getLevel() * 3000);
+
+    if (vol > 100) {
+        sensitive= sensitive +2;
+    } else {
+        sensitive= sensitive - 2;
+    } 
+
+    if (sensitive < 7) {
+        sensitive = 7;
+    }
+
+
+    mountain.style('fill', 'rgb(' + sensitive + ', 71, 53');
+    console.log(sensitive);
+}
+
+function touchStarted() {
+    getAudioContext().resume();
 }
