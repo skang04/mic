@@ -79,7 +79,7 @@ h1 {
 
 
 
-@media (max-width: 675px) {
+@media (max-width: 575px) {
 
   .illustration {
     opacity: 0;
@@ -96,7 +96,7 @@ h1 {
 
   .highlight {
     background-color: #FC763A;
-    padding: 0 10px;
+    padding: 0 5px;
     color: black;
   }
 }
