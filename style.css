@@ -77,10 +77,10 @@ h1 {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
   .fire-illustration {
-    padding-top: 110px;
+    padding-top: 115px;
   }
 }
 
