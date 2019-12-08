@@ -7,7 +7,6 @@ let sensitive = 7;
 let illustration;
 let fire;
 let backgrounds;
-var touchStarted;
 
 
 function setup() {
@@ -25,6 +24,7 @@ function setup() {
 }
 
 function draw() {
+    getAudioContext().resume();
     background('#053030');
     let vol = (mic.getLevel() * 3000);
 
@@ -44,19 +44,15 @@ function draw() {
     sun.style('fill', 'rgb(255,198,' + sensitive);
 
     if (sensitive > 230) {
-        illustration.style('opacity', '0');
-        fire.style('opacity', '100');
+        illustration.style('display', 'none');
+        fire.style('display', 'block');
         backgrounds.style('background-color','#232323')
 
     } else {
-        illustration.style('opacity', '100');
-        fire.style('opacity', '0')
+        illustration.style('display', 'block');
+        fire.style('display', 'none')
         backgrounds.style('background-color', '#053030')
     }
 
     console.log(sensitive);
-}
-
-function touchStarted() {
-    getAudioContext().resume();
 }
