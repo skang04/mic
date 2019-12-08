@@ -8,7 +8,6 @@ let illustration;
 let fire;
 let backgrounds;
 
-
 function setup() {
     cnv = createCanvas(1, 1);
    cnv.position(100,1);
