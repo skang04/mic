@@ -25,7 +25,7 @@ h1 {
 }
 
 .fire-illustration {
-  padding-top: 125px;
+  padding-top: 100px;
   width: 85%;
   margin: 0 auto;
   display: none;
@@ -77,12 +77,6 @@ h1 {
   }
 }
 
-@media (max-width: 1100px) {
-
-  .fire-illustration {
-    padding-top: 115px;
-  }
-}
 
 
 @media (max-width: 675px) {
