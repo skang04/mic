@@ -28,15 +28,18 @@ function draw() {
     background('#053030');
     let vol = (mic.getLevel() * 3000);
 
-    if (vol > 50) {
+    if (vol > 20) {
         sensitive= sensitive +2;
-    } else {
+    } 
+    else {
         sensitive= sensitive - 2;
     } 
 
     if (sensitive < 10) {
         sensitive = 10;
-    }
+    } else if (sensitive > 350) {
+        sensitive = 350;
+    } 
 
 
     mountain.style('fill', 'rgb(' + sensitive + ', 71, 53');
