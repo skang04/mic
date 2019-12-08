@@ -77,9 +77,15 @@ h1 {
   }
 }
 
+@media (max-width: 900px) {
+
+  .fire-illustration {
+    padding-top: 110px;
+  }
+}
 
 
-@media (max-width: 575px) {
+@media (max-width: 675px) {
 
   .illustration {
     opacity: 0;
